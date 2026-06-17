@@ -12,6 +12,7 @@ The codebase is mature and live with real capital. The strategy IP itself stays 
 
 | Product | What it does | Where it runs |
 |---|---|---|
+| **ATLAS** | Multi-model AI market research desk. 200+ symbols across equities, crypto, commodities, forex, indices and ETFs, each a daily source-cited research brief, plus a Macro Radar of economic indicators. Research only. | [atlas.freedomcore.io](https://atlas.freedomcore.io/) |
 | **MAVERICK** | KuCoin perpetuals trader. Trinity Cascade (three medalist champions running in parallel under a shared risk envelope). | [maverick.freedomcore.io](https://maverick.freedomcore.io/) |
 | **SHADOW** | HyperLiquid copy-trading. Cohort-weighted Q-score profiler, scalper-rejecting consensus quorum, 59 wallets across three tiers. | [shadow.freedomcore.io](https://shadow.freedomcore.io/) |
 | **ARENA** | Public leaderboard. 75 wallets ranked by Wilson-lower win rate and 6-component Q-score, rebuilt every six hours from SHADOW's profiler database. | [arena.freedomcore.io](https://arena.freedomcore.io/) |
