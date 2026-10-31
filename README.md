@@ -1,55 +1,44 @@
+<p align="center">
+  <img src="assets/atlas-banner.png" alt="Atlas by FreedomCore: 6,375 company and crypto identities across 53 countries" width="100%">
+</p>
+
 # FreedomCore
 
-**Autonomous AI trading systems for crypto perpetuals and on-chain markets.**
+I'm Rob, and FreedomCore is what I've been building for the past year: AI systems for market research and trading that show their working. I build it with a small team of AI collaborators, Codex, Gemini and Claude, running on my own servers. Changes are checked by one of the others before they go live.
 
-FreedomCore builds production trading bots that run themselves. The strategies that drive them are crowned by a multi-LLM swarm that rewrites its own code every cycle, evaluated under honest physics, and only deployed when a new candidate strictly beats the live champion on a fresh out-of-sample window.
+## What I'm building
 
-The codebase is mature and live with real capital. The strategy IP itself stays in private repositories. The links below are the public surface.
+| Project | What it does | Where |
+| :-- | :-- | :-- |
+| **Atlas** | My market research desk. 6,375 company and crypto listings across 53 countries, each keyed to its exact exchange listing rather than a bare ticker, because the same ticker often means different companies on different exchanges. Coverage is still being filled in: where sources have passed our checks you get dated, source-cited research, and where they haven't yet, the page says so rather than guessing. | [atlas.freedomcore.io](https://atlas.freedomcore.io/) |
+| **Maverick** | My KuCoin perpetuals trading system, designed to run three champion strategies in parallel under one shared risk limit. It's being reinstalled after a server move. | [maverick.freedomcore.io](https://maverick.freedomcore.io/) |
+| **Shadow** | HyperLiquid copy-trading research, built to profile wallets and filter out scalpers before anything is followed. | [shadow.freedomcore.io](https://shadow.freedomcore.io/) |
+| **Arena** | A public leaderboard of the wallets Shadow tracks, ranked on conservative win-rate and quality scores. | [arena.freedomcore.io](https://arena.freedomcore.io/) |
+| **Quantum** | AI-built portfolios for crypto founders. It's being reinstalled after a server move and will be back soon. | |
 
----
+## Open data
 
-## What's live
+I publish Atlas's listing register openly so anyone can check it, cite it or build on it. It's free under CC BY 4.0.
 
-| Product | What it does | Where it runs |
-|---|---|---|
-| **ATLAS** | Multi-model AI market research desk and open-data publisher. 6,375 canonical company and crypto listings across 53 countries with canonical profiles and source-cited research where sources pass admission, plus Atlas Quakes (source-dated market developments) and CC BY 4.0 open datasets ([catalog](https://atlas.freedomcore.io/datasets/) · [GitHub](https://github.com/freedomcoreai-lang/freedomcore-datasets)). Research only. | [atlas.freedomcore.io](https://atlas.freedomcore.io/) |
-| **MAVERICK** | KuCoin perpetuals trader. Trinity Cascade (three medalist champions running in parallel under a shared risk envelope). | [maverick.freedomcore.io](https://maverick.freedomcore.io/) |
-| **SHADOW** | HyperLiquid copy-trading. Cohort-weighted Q-score profiler, scalper-rejecting consensus quorum, 59 wallets across three tiers. | [shadow.freedomcore.io](https://shadow.freedomcore.io/) |
-| **ARENA** | Public leaderboard. 75 wallets ranked by Wilson-lower win rate and 6-component Q-score, rebuilt every six hours from SHADOW's profiler database. | [arena.freedomcore.io](https://arena.freedomcore.io/) |
-| **QUANTUM** | AI-built portfolios for crypto founders. Static intake, bespoke delivery. | [quantum.freedomcore.io](https://quantum.freedomcore.io/) |
+- GitHub: [freedomcore-datasets](https://github.com/freedomcoreai-lang/freedomcore-datasets)
+- Hugging Face: [freedomcoreai](https://huggingface.co/freedomcoreai)
+- Kaggle: [atlasfreedomcoreio](https://www.kaggle.com/atlasfreedomcoreio)
+- On Atlas: [atlas.freedomcore.io/datasets](https://atlas.freedomcore.io/datasets/)
 
----
+## The standards the trading side is built to
 
-## How it works
+These are the design rules Maverick was built around. They describe how the system is meant to work, not a live performance claim, and while Maverick is being reinstalled nothing is trading.
 
-Five principles you can verify on the live sites:
+1. **Honest testing.** Candidate strategies are re-run with a time shift. If a score collapses, the strategy was peeking at the future and is thrown out.
+2. **Beat it or hold.** A new strategy only replaces the current one if it beats it on the same fresh week of data. If nothing beats it, nothing changes.
+3. **Walk-forward checks.** A survivor has to hold up in every rolling sub-window, not just on average.
+4. **A second opinion.** Independent AI reviewers vote on each promotion, and a split vote keeps the incumbent.
+5. **Safe switch-overs.** Changes run a health check and roll back automatically if anything fails.
 
-**1. Honest evaluation.** Every candidate strategy is dual-tested with a 60-second time shift. If its score collapses more than 25% under the brutal pass, it is flagged as future-peeking and zeroed. Lookahead bias does not survive the gate.
+The strategy code itself stays private. What you'll find here is the public data, the sites and the infrastructure.
 
-**2. Strict beat or hold.** A new candidate must outperform the reigning champion on the same fresh seven-day window. If nothing beats the live system, the system holds. The decision not to evolve is itself intelligence.
+## Get in touch
 
-**3. Walk-forward validation.** Every survivor must be net positive in each of three rolling two-day sub-windows.
+For partnerships, licensing or questions about the data: [freedomcoreai@gmail.com](mailto:freedomcoreai@gmail.com)
 
-**4. Multi-LLM judicial review.** Three external LLMs review every promotion candidate. Majority crowns one. Disagreement defaults to the incumbent. Council failure never blocks live trading.
-
-**5. Atomic hot-swap.** Live deploys run a 45-second health check. Failure rolls back automatically. No bifurcation between what evaluation saw and what fires on the exchange.
-
----
-
-## Build cadence
-
-Active development. The swarm runs every cycle. The repositories visible on this profile are the public marketing site, the public ARENA leaderboard, the SHADOW operator tooling, and the infrastructure config. The strategy code is in separate private repositories and stays there.
-
----
-
-## Stack
-
-Pure NumPy on the hot path. Python and Flask for operator dashboards. SQLite (WAL) for the per-symbol feature store. nginx for the public surface. Solidity for on-chain components. Codex, Gemini, and Claude Opus 4.7 for the swarm and the high-court review chain.
-
----
-
-## Contact
-
-For partnership, licensing, or buy-side enquiries: [freedomcoreai@gmail.com](mailto:freedomcoreai@gmail.com)
-
-For the live trading bot subscription: [maverick.freedomcore.io/pages/access.html](https://maverick.freedomcore.io/pages/access.html)
+Everything here is research. None of it is financial advice, and Atlas doesn't execute trades.
