@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/atlas-banner.png" alt="Atlas by FreedomCore: 6,394 company and crypto listings across 69 exchanges and venues" width="100%">
+  <img src="assets/atlas-banner.png" alt="Atlas by FreedomCore: 6,394 listings, 4,875 equities on 59 exchanges plus 1,500 crypto assets" width="100%">
 </p>
 
 # FreedomCore
@@ -10,7 +10,7 @@ I'm Rob, and FreedomCore is what I've been building for the past year: AI system
 
 | Project | What it does | Where |
 | :-- | :-- | :-- |
-| **Atlas** | My market research desk. 6,394 company and crypto listings across 69 exchanges and venues in 54 countries, each keyed to its exact exchange listing rather than a bare ticker, because the same ticker often means different companies on different exchanges. Coverage is still being filled in: where sources have passed our checks you get dated, source-cited research, and where they haven't yet, the page says so rather than guessing. | [atlas.freedomcore.io](https://atlas.freedomcore.io/) |
+| **Atlas** | My market research desk. 6,394 listings: 4,875 equities on 59 exchanges in 53 countries, 1,500 crypto assets, plus indices, commodities and FX, each keyed to its exact exchange listing rather than a bare ticker, because the same ticker often means different companies on different exchanges. Coverage is still being filled in: where sources have passed our checks you get dated, source-cited research, and where they haven't yet, the page says so rather than guessing. | [atlas.freedomcore.io](https://atlas.freedomcore.io/) |
 | **Maverick** | My KuCoin perpetuals trading system, designed to run three champion strategies in parallel under one shared risk limit. It's being reinstalled after a server move. | [maverick.freedomcore.io](https://maverick.freedomcore.io/) |
 | **Shadow** | HyperLiquid copy-trading research, built to profile wallets and filter out scalpers before anything is followed. | [shadow.freedomcore.io](https://shadow.freedomcore.io/) |
 | **Arena** | A public leaderboard of the wallets Shadow tracks, ranked on conservative win-rate and quality scores. | [arena.freedomcore.io](https://arena.freedomcore.io/) |
